@@ -181,9 +181,26 @@ var student = {
     myPenguin.fly()
     
     //30
-    //
+    //Write a for ... in loop to print each key to the console. 
     
+    function forInLoop(obj) {
+      for (let key in obj) {
+        console.log(key)
+      }
+    }
     
+    console.log(forInLoop(myPenguin))
+    
+    //31
+    // Write another for ... in loop to print the value of each key to the console. (Hint: You'll need to use bracket notation to access the values this way, instead of dot notation!)
+    
+    function forInLoopForValues(obj) {
+      for (let key in obj) {
+        console.log(obj[key])
+      }
+    }
+    
+    console.log(forInLoopForValues(myPenguin))
     
     
     
