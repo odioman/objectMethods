@@ -202,7 +202,58 @@ var student = {
     
     console.log(forInLoopForValues(myPenguin))
     
-    
+    //Medium Object Problem Set
+
+    function isPlainObject(obj) {
+        if (obj !== null && !Array.isArray(obj)) {
+          return true
+        } else {
+          return false
+        }
+      }
+      
+      //console.log(isPlainObject({a: 1}))
+      
+      function makePairs(obj) {
+        return Object.entries(obj)
+      }
+      
+      //console.log(makePairs({a: 1, b:2}))
+      
+      function without(obj, delProp) {
+        delete obj[delProp]
+        return obj
+      }
+      //const data = { a: 1, b: 2 };
+      //console.log(without(data, 'b'))
+      
+      function isEmpty(obj) {
+        if (Object.keys(obj).length === 0) {
+          return true
+        }
+      
+        return !Object.keys(obj).filter((key) => obj[key] || obj[key] === 0 || obj[key] === false).length
+      }
+      
+      //const data = { a: 1, b: undefined };
+      //const data2 = { a: undefined };
+      //console.log(isEmpty(data)); // false
+      //console.log(isEmpty(data2)); // true
+      
+      function isEqual(Obj, Obj2) {
+       if (Object.keys(Obj).length !== Object.keys(Obj2).length) {
+         return false
+       }
+        return !Object.keys(Obj).filter((key) => Obj[key] !== Obj2[key]).length
+      } 
+      
+      const data = { a: 1, b: 1 };
+      const data2 = { a: 1, b: 1 };
+      const data3 = { a: 1, b: 2 };
+      //console.log(isEqual(data, data2)); // true
+      //console.log(isEqual(data, data3)); // false
+      
+      
     
     
     
